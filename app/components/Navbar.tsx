@@ -40,9 +40,8 @@ const Navbar = () => {
                     </div>
                     <div className='hidden md:flex space-x-8'>
                         <Link href='/' className='text-lg font-bold'>Home</Link>
-                        <Link href='/blogs' className='text-lg font-bold'>Blog</Link>
+                        <Link href='/blogs' className='text-lg font-bold'>Create</Link>
                         <Link href='/about' className='text-lg font-bold'>About</Link>
-                        <Link href='/contact' className='text-lg font-bold'>Contact</Link>
                         <Link href='/login' className='text-lg font-bold'>Login</Link>
                     </div>
                     {show?<button onClick={()=>setShow(!show)} className='md:hidden'><AiOutlineClose /></button>:<button onClick={()=>setShow(!show)} className='md:hidden'><AiOutlineMenu /></button>}
@@ -53,7 +52,6 @@ const Navbar = () => {
                             <Link onClick={()=>setShow(false)} href='/' className='text-lg font-bold'>Home</Link>
                             <Link onClick={()=>setShow(false)} href='/blogs' className='text-lg font-bold'>Blog</Link>
                             <Link onClick={()=>setShow(false)} href='/about' className='text-lg font-bold'>About</Link>
-                            <Link onClick={()=>setShow(false)} href='/contact' className='text-lg font-bold'>Contact</Link>
                             <Link onClick={()=>setShow(false)} href='/login' className='text-lg font-bold'>Login</Link>
                         </div> : null
                 }
