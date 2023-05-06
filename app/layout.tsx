@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import './globals.css'
 import { Nunito } from 'next/font/google'
+import { StoreProvider } from './utils/store';
 
 const font = Nunito({ 
   subsets: ['latin'], 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
-        {children}
+        <StoreProvider>
+          <Navbar />
+          {children}
+        </StoreProvider>
       </body>
     </html>
   )

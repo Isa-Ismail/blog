@@ -4,10 +4,15 @@ import React from 'react'
 import Container from './Container'
 import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { Store } from '../utils/store'
 
 interface Props {}
 
-const Navbar = () => {
+const Navbar: React.FC<Props> = () => {
+    
+    const { state, dispatch } = React.useContext<any>(Store)
+    
+    console.log(state)
 
     const [show, setShow] = React.useState(false)
 
